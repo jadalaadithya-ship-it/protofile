@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adithya Jadala — Implementation Analyst & AI Student</title>
+  <meta name="description" content="Portfolio of Adithya Jadala — Implementation Analyst, Computer Science (AI) student at VJIT, specializing in SQL, machine learning, IoT, and automation." />
+  <meta name="keywords" content="Adithya Jadala, Implementation Analyst, AI, Machine Learning, IoT, SQL, Hyderabad" />
+  <meta name="author" content="Adithya Jadala" />
+  <meta property="og:title" content="Adithya Jadala — Portfolio" />
+  <meta property="og:description" content="Implementation Analyst & AI Student | SQL | ML | IoT" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome (CDN, no key needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── CURSOR ─── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-monogram">AJ</span>
+        <span class="logo-text">Adithya Jadala</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"       class="nav-link" data-section="home">Home</a></li>
+        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <!-- Animated background particles -->
+    <div class="hero-bg">
+      <div class="particles" id="particles"></div>
+      <div class="grid-overlay"></div>
+      <div class="glow-orb glow-1"></div>
+      <div class="glow-orb glow-2"></div>
+      <div class="glow-orb glow-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <!-- Left: Text -->
+      <div class="hero-text" data-aos="fade-right">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="name-line">Adithya</span>
+          <span class="name-line accent-text">Jadala</span>
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span class="role-prefix">I am a</span>
+          <div class="typing-wrapper">
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+        </div>
+
+        <p class="hero-description">
+          B.Tech <strong>Artificial Intelligence</strong> student at VJIT, Hyderabad.
+          Passionate about <span class="highlight">requirement analysis</span>,
+          <span class="highlight">SQL &amp; database engineering</span>,
+          <span class="highlight">machine learning</span>, and
+          <span class="highlight">IoT automation</span>.
+          Bridging analytical thinking with intelligent system design.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" id="heroContactBtn">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+          </a>
+          <a href="#projects" class="btn btn-secondary" id="heroProjectsBtn">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a href="https://www.linkedin.com/in/jadala-adithya-b5b5a52b8/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-linkedin"
+             id="heroLinkedInBtn"
+             aria-label="View LinkedIn profile">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">8.25</span>
+            <span class="stat-label">CGPA</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: 3D Photo -->
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="photo-frame">
+          <div class="photo-ring ring-outer"></div>
+          <div class="photo-ring ring-middle"></div>
+          <div class="photo-inner">
+            <img
+              src="assets/hero-photo.jpg"
+              alt="Adithya Jadala — Professional Portrait"
+              class="hero-photo"
+              id="heroPhoto"
+              loading="eager"
+            />
+            <!-- Monogram fallback shown only if image fails -->
+            <div class="hero-monogram" id="heroMonogram" style="display:none;">
+              <span class="monogram-text">AJ</span>
+            </div>
+          </div>
+          <div class="photo-badge photo-badge-top">
+            <i class="fas fa-brain"></i> AI Student
+          </div>
+          <div class="photo-badge photo-badge-bottom">
+            <i class="fas fa-map-marker-alt"></i> Hyderabad
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">Driven by curiosity. Grounded in data.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card" data-aos="fade-right">
+          <div class="about-card-icon"><i class="fas fa-user-graduate"></i></div>
+          <h3>Education</h3>
+          <div class="about-edu-item">
+            <p class="edu-degree">B.Tech — Artificial Intelligence</p>
+            <p class="edu-school"><i class="fas fa-university"></i> Vidya Jyothi Institute of Technology</p>
+            <p class="edu-meta"><i class="fas fa-calendar"></i> 2023 – Present &nbsp;|&nbsp; <i class="fas fa-star"></i> CGPA: 8.25</p>
+          </div>
+        </div>
+
+        <div class="about-card about-card-main" data-aos="fade-up">
+          <p class="about-bio">
+            I am an aspiring <strong>AI and Data professional</strong> currently pursuing my B.Tech in Artificial Intelligence.
+            I enjoy working at the intersection of structured data systems and intelligent automation —
+            from writing clean SQL queries and producing clear documentation to building IoT-driven
+            machine learning pipelines.
+          </p>
+          <p class="about-bio">
+            My internship as a <strong>Robotics Trainee</strong> at the Ascend Initiative gave me hands-on
+            exposure to practical engineering workflows, deepening my interest in real-world
+            technology applications.
+          </p>
+          <div class="about-languages">
+            <span class="lang-badge"><i class="fas fa-language"></i> English</span>
+            <span class="lang-badge"><i class="fas fa-language"></i> Telugu</span>
+            <span class="lang-badge"><i class="fas fa-language"></i> Hindi</span>
+          </div>
+        </div>
+
+        <div class="about-card" data-aos="fade-left">
+          <div class="about-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h3>Location</h3>
+          <p class="about-location-text">Hyderabad, Telangana, India</p>
+          <div class="about-contact-quick">
+            <a href="mailto:jadalaadithya@gmail.com" class="quick-link">
+              <i class="fas fa-envelope"></i> jadalaadithya@gmail.com
+            </a>
+            <a href="tel:+918340075440" class="quick-link">
+              <i class="fas fa-phone"></i> +91 83400 75440
+            </a>
+            <a href="https://www.linkedin.com/in/jadala-adithya-b5b5a52b8/"
+               target="_blank" rel="noopener noreferrer" class="quick-link">
+              <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-code skill-cat-icon"></i>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-brain skill-cat-icon"></i>
+            <h3>AI / Machine Learning</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Machine Learning</span>
+            <span class="skill-pill">Deep Learning</span>
+            <span class="skill-pill">Computer Vision</span>
+            <span class="skill-pill">Data Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-database skill-cat-icon"></i>
+            <h3>Database &amp; Data</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">SQL Queries</span>
+            <span class="skill-pill">Database Design</span>
+            <span class="skill-pill">Data Modeling</span>
+            <span class="skill-pill">Oracle DB</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-microchip skill-cat-icon"></i>
+            <h3>IoT &amp; Hardware</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Arduino</span>
+            <span class="skill-pill">Sensor Integration</span>
+            <span class="skill-pill">IoT Protocols</span>
+            <span class="skill-pill">Automation</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-tasks skill-cat-icon"></i>
+            <h3>Analysis &amp; Documentation</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Requirements Analysis</span>
+            <span class="skill-pill">Technical Documentation</span>
+            <span class="skill-pill">Quality Testing</span>
+            <span class="skill-pill">Process Mapping</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <i class="fas fa-tools skill-cat-icon"></i>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Jupyter</span>
+            <span class="skill-pill">Linux</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Built</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">Real-world systems that solve real problems</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-icon-wrap">
+            <i class="fas fa-seedling project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-meta-top">
+              <span class="project-badge badge-iot">IoT + ML</span>
+              <span class="project-badge badge-cv">Computer Vision</span>
+            </div>
+            <h3 class="project-title">Smart Irrigation System with Leaf Disease Detection</h3>
+            <p class="project-desc">
+              An IoT-powered agricultural system integrating automated irrigation control
+              with real-time leaf disease identification using computer vision techniques.
+              Sensor data drives irrigation decisions while the ML pipeline analyses leaf
+              images to detect disease patterns, enabling early intervention.
+            </p>
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> Sensor-based automated irrigation control</li>
+              <li><i class="fas fa-check-circle"></i> Leaf disease detection via image processing</li>
+              <li><i class="fas fa-check-circle"></i> Real-time monitoring &amp; data logging</li>
+              <li><i class="fas fa-check-circle"></i> Integrated hardware-software pipeline</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">IoT</span>
+            </div>
+            <!-- GitHub link placeholder — add repository URL when available -->
+            <!-- <a href="YOUR_GITHUB_REPO_URL" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="fab fa-github"></i> Source Code
+            </a> -->
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-icon-wrap">
+            <i class="fas fa-snowflake project-icon"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-meta-top">
+              <span class="project-badge badge-iot">IoT</span>
+              <span class="project-badge badge-automation">Automation</span>
+            </div>
+            <h3 class="project-title">Smart Refrigerator Using IoT</h3>
+            <p class="project-desc">
+              An intelligent refrigerator system leveraging IoT connectivity to monitor
+              contents, track freshness, and automate temperature management. Sensors
+              track inventory and environmental conditions, enabling smart consumption
+              patterns and energy efficiency.
+            </p>
+            <ul class="project-features">
+              <li><i class="fas fa-check-circle"></i> IoT-based content monitoring</li>
+              <li><i class="fas fa-check-circle"></i> Automated temperature management</li>
+              <li><i class="fas fa-check-circle"></i> Freshness tracking &amp; alerts</li>
+              <li><i class="fas fa-check-circle"></i> Remote monitoring capability</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">Automation</span>
+              <span class="tech-tag">Embedded Systems</span>
+            </div>
+            <!-- GitHub link placeholder — add repository URL when available -->
+            <!-- <a href="YOUR_GITHUB_REPO_URL" target="_blank" rel="noopener noreferrer" class="project-link">
+              <i class="fab fa-github"></i> Source Code
+            </a> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Journey So Far</span>
+        <h2 class="section-title">Experience &amp; <span class="accent">Certifications</span></h2>
+        <p class="section-subtitle">Learning through doing</p>
+      </div>
+
+      <div class="exp-cert-grid">
+
+        <!-- Experience timeline -->
+        <div class="timeline-wrap" data-aos="fade-right">
+          <h3 class="exp-sub-title"><i class="fas fa-briefcase"></i> Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h4>Robotics Trainee</h4>
+                  <span class="timeline-badge">Internship</span>
+                </div>
+                <p class="timeline-company"><i class="fas fa-building"></i> Ascend Initiative</p>
+                <p class="timeline-desc">
+                  Gained hands-on experience with robotics systems and engineering workflows,
+                  developing practical skills in hardware integration, systems thinking,
+                  and real-world technology application.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs-wrap" data-aos="fade-left">
+          <h3 class="exp-sub-title"><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="cert-cards">
+
+            <div class="cert-card">
+              <div class="cert-logo cert-cisco">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Python Essentials</h4>
+                <p>Cisco Networking Academy</p>
+              </div>
+              <div class="cert-check"><i class="fas fa-check-circle"></i></div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-logo cert-oracle">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Database Foundations</h4>
+                <p>Oracle</p>
+              </div>
+              <div class="cert-check"><i class="fas fa-check-circle"></i></div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-logo cert-oracle">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Artificial Intelligence</h4>
+                <p>Oracle</p>
+              </div>
+              <div class="cert-check"><i class="fas fa-check-circle"></i></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">Open to opportunities, collaborations, and conversations</p>
+      </div>
+
+      <div class="contact-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="contact-info-panel">
+          <h3>Contact Information</h3>
+          <p class="contact-intro">
+            Feel free to reach out for internship opportunities, project collaborations,
+            or any queries. I typically respond within 24 hours.
+          </p>
+
+          <div class="contact-items">
+            <a href="mailto:jadalaadithya@gmail.com" class="contact-item" id="contactEmail">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-item-body">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">jadalaadithya@gmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right contact-item-arrow"></i>
+            </a>
+
+            <a href="tel:+918340075440" class="contact-item" id="contactPhone">
+              <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-item-body">
+                <span class="contact-item-label">Phone</span>
+                <span class="contact-item-value">+91 83400 75440</span>
+              </div>
+              <i class="fas fa-arrow-right contact-item-arrow"></i>
+            </a>
+
+            <div class="contact-item non-link">
+              <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-item-body">
+                <span class="contact-item-label">Location</span>
+                <span class="contact-item-value">Hyderabad, Telangana, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/in/jadala-adithya-b5b5a52b8/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-btn social-linkedin"
+               id="contactLinkedInBtn"
+               aria-label="Connect on LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span>Connect on LinkedIn</span>
+            </a>
+            <!-- GitHub button: add your GitHub URL below when available -->
+            <!-- <a href="YOUR_GITHUB_URL" target="_blank" rel="noopener noreferrer"
+               class="social-btn social-github" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+              <span>GitHub Profile</span>
+            </a> -->
+          </div>
+        </div>
+
+        <div class="contact-visual-panel" data-aos="fade-left">
+          <div class="contact-monogram-wrap">
+            <div class="contact-monogram">AJ</div>
+            <div class="contact-availability">
+              <span class="avail-dot"></span>
+              <span>Available for new opportunities</span>
+            </div>
+            <p class="contact-tagline">
+              "Building intelligent systems,<br/>one line of code at a time."
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-monogram">AJ</span>
+        <div>
+          <p class="footer-name">Adithya Jadala</p>
+          <p class="footer-title">Implementation Analyst | AI Student</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/jadala-adithya-b5b5a52b8/"
+           target="_blank" rel="noopener noreferrer"
+           class="footer-social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:jadalaadithya@gmail.com"
+           class="footer-social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Adithya Jadala. Crafted with <i class="fas fa-heart" style="color:#64ffda;"></i> in Hyderabad.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
